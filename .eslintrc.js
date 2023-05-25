@@ -3,7 +3,14 @@ module.exports = {
     'jest/globals': true,
   },
   root: true,
-  extends: '@react-native-community',
+  extends: [
+    'plugin:react/recommended',
+    'eslint:recommended',
+    'plugin:jest/recommended',
+    ,
+    '@react-native-community',
+    'prettier',
+  ],
   rules: {
     'react-hooks/exhaustive-deps': 'off',
     quotes: ['error', 'single'],
@@ -17,5 +24,10 @@ module.exports = {
     'import/resolver': {
       'babel-module': {},
     },
+  },
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    // Required for certain syntax usages
+    ecmaVersion: 2020,
   },
 };
