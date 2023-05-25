@@ -1,13 +1,14 @@
 module.exports = {
   env: {
     'jest/globals': true,
+    es6: true,
   },
   root: true,
   extends: [
-    'plugin:react/recommended',
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:jest/recommended',
-    ,
+    'plugin:react/recommended',
     '@react-native-community',
     'prettier',
   ],
@@ -28,6 +29,7 @@ module.exports = {
   parser: '@babel/eslint-parser',
   parserOptions: {
     // Required for certain syntax usages
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
   },
+  ignorePatterns: ['!.*', 'dist', 'node_modules', '.eslintignore'],
 };
