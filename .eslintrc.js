@@ -31,5 +31,12 @@ module.exports = {
     // Required for certain syntax usages
     ecmaVersion: 'latest',
   },
-  ignorePatterns: ['!.*', 'dist', 'node_modules', '.eslintignore'],
+  ignorePatterns: [
+    '!.*',
+    'dist',
+    'node_modules',
+    '.eslintignore',
+    '*.gradle',
+    '*.plist',
+  ],
 };
